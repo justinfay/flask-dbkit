@@ -1,0 +1,6 @@
+Flask-DBKit
+
+Simple dbkit integration for Flask.
+
+NOTE: This extension is in a very early stage of
+development and its use is not recommended.
