@@ -33,6 +33,7 @@ class DBKit(object):
     """
 
     db_config_prefix = 'DB_'
+    default_factory = dbkit.DictFactory
 
     def __init__(self, module, *args, **kwargs):
         self.module = module
@@ -57,4 +58,5 @@ class DBKit(object):
             app.config['DBKIT_POOL_SIZE'],
             *self.mdr_args,
             **self.mdr_kwargs)
+        pool.default_factory = self.default_factory
         app.wsgi_app = _DBKitMiddleware(app, pool)
