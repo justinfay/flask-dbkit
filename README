@@ -3,4 +3,8 @@ Flask-DBKit
 Simple dbkit integration for Flask.
 
 NOTE: This extension is in a very early stage of
-development and its use is not recommended.
+development and its use is not recommended and breaking
+API changes are expected.
+
+The version number will be pegged at 0.0.1 until some
+level of API stability is achieved.

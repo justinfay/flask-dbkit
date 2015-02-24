@@ -33,9 +33,11 @@ class DBKit(object):
     """
 
     db_config_prefix = 'DB_'
-    default_factory = dbkit.DictFactory
 
-    def __init__(self, module, *args, **kwargs):
+    def __init__(self, module, default_factory=None, *args, **kwargs):
+        if default_factory is None:
+            default_factory = dbkit.DictFactory
+        self.default_factory = default_factory
         self.module = module
         self.mdr_args = args
         self.mdr_kwargs = kwargs
