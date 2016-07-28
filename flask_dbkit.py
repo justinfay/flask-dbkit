@@ -48,7 +48,7 @@ class DBKit(object):
         """
         return dict(
             (k.replace(self.db_config_prefix, '').lower(), v)
-            for k, v in config.iteritems()
+            for k, v in config.items()
             if k.startswith(self.db_config_prefix))
 
     def init_app(self, app):
