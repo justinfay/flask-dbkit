@@ -31,7 +31,7 @@ A simple example of how to initialise the extension::
     import sqlite3
 
     app = Flask(__name__)
-    app.config['DB_PATH'] = ':memory:'
+    app.config['DB_DATABASE'] = ':memory:'
 
     dbkit = DBKit(sqlite3)
     dbkit.init_app(app)
