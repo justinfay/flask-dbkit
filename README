@@ -25,7 +25,7 @@ Quickstart
 
 A simple example of how to initialise the extension::
 
-    from dbkit import execute
+    from dbkit import query_value
     from flask import Flask
     from flask.ext.dbkit import DBKit
     import sqlite3
@@ -38,7 +38,10 @@ A simple example of how to initialise the extension::
 
     @app.route('/')
     def index():
-        return execute('SELECT "Hi there from your DB."')
+        return query_value('SELECT "Hi there from your DB."')
+
+    if __name__ == "__main__":
+        app.run()
 
 
 Limitations
